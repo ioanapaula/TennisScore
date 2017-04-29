@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:configChanges="keyboardHidden|orientation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.example.android.tennisscore.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/player_a"
+            style="@style/PlayerLabels"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:text="Player A" />
+
+        <Button
+            android:id="@+id/point_a"
+            style="@style/PointBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/player_a"
+            android:layout_marginLeft="40dp"
+            android:onClick="scorePlayerA"
+            android:text="+Point"/>
+
+        <TextView
+            android:id="@+id/player_b"
+            style="@style/PlayerLabels"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:text="Player B" />
+
+        <Button
+            style="@style/PointBtn"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/player_b"
+            android:layout_marginRight="40dp"
+            android:onClick="scorePlayerB"
+            android:text="+Point"/>
+
+        <TextView
+            style="@style/Labels"
+            android:id="@+id/points"
+            android:layout_marginTop="130dp"
+            android:text="Points" />
+
+        <LinearLayout
+            style="@style/ScoreLayout"
+            android:id="@+id/score_points"
+            android:layout_below="@id/points">
+
+            <TextView
+                android:id="@+id/point_for_a"
+                style="@style/ScorePoints" />
+
+            <TextView
+                android:id="@+id/point_for_b"
+                style="@style/ScorePoints" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/games"
+            style="@style/Labels"
+            android:layout_below="@id/score_points"
+            android:text="Games" />
+
+        <LinearLayout
+            style="@style/ScoreLayout"
+            android:id="@+id/score_games"
+            android:layout_below="@id/games">
+
+            <TextView
+                android:id="@+id/game_for_a"
+                style="@style/ScoreGames" />
+
+            <TextView
+                android:id="@+id/game_for_b"
+                style="@style/ScoreGames" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sets"
+            style="@style/Labels"
+            android:layout_below="@id/score_games"
+            android:text="Sets" />
+
+        <LinearLayout
+            style="@style/ScoreLayout"
+            android:id="@+id/score_sets"
+            android:layout_below="@id/sets">
+
+            <TextView
+                android:id="@+id/set_for_a"
+                style="@style/ScoreSets" />
+
+            <TextView
+                android:id="@+id/set_for_b"
+                style="@style/ScoreSets" />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/PointBtn"
+            android:layout_below="@id/score_sets"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:onClick="resetScore"/>
+
+    </RelativeLayout>
+
+</ScrollView>
